@@ -1,2 +1,18 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+
+/* | Purpose    | Class                                                         |
+| ---------- | ------------------------------------------------------------- |
+| Background | bg-[#FFF7ED]                                                  |
+| Surface    | bg-[#FEFAEB]                                                  |
+| Heading    | text-[#0C2842]                                                |
+| Text       | text-[#5B6472]                                                |
+| Body Text  | text-[#6B7280]                                                |
+| Accent     | text-[#FD7933]                                                |
+| Accent Soft| text-[#FDBA74]                                                |
+| Border     | border-[#F3E8D5]                                              |
+| Button     | bg-[#FD7933] text-white hover:bg-[#E66A2C]                    |
+| Button Alt | bg-[#0C2842] text-white hover:bg-[#0A2236]                    |
+| Highlight  | bg-[#FEF3C7]                                                  |
+| Card       | bg-white shadow-sm border border-[#F3E8D5]                    |
+| Footer     | bg-[#0C2842] text-white                                       | */

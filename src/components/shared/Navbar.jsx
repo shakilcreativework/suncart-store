@@ -2,16 +2,15 @@
 
 import Link from "next/link";
 import Container from "./Container";
-import { PiShoppingCart } from "react-icons/pi";
 import Button from "../ui/Button";
-import { CiGift } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoIosSunny } from "react-icons/io";
 import { useState } from "react";
 import { FiLogIn } from "react-icons/fi";
-import { GoSignIn } from "react-icons/go";
 import { usePathname } from "next/navigation";
+import { FaUserAstronaut } from "react-icons/fa";
+import { MdLogout } from "react-icons/md";
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -27,7 +26,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="bg-[#fefaeb] backdrop-blur-md sticky top-0 py-2.5 z-50 shadow-xs">
+            <div className="bg-[#FFF7ED] backdrop-blur-md sticky top-0 py-2.5 z-50 shadow-xs">
                 <nav className="relative">
                     <Container>
                         <div className="flex justify-between items-center w-full">
@@ -44,14 +43,14 @@ const Navbar = () => {
 
                             {/* Desktop Menu */}
                             <ul className="hidden lg:flex gap-4 lg:gap-6 items-center">
-                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/') && 'text-[#fd7933]'}`} href={'/'}>Home</Link></li>
-                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/products') && 'text-[#fd7933]'}`} href={'/products'}>Products</Link></li>
-                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/profile') && 'text-[#fd7933]'}`} href={'/profile'}>My Profile</Link></li>
+                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 ${isActive('/') && 'text-[#fd7933]'}`} href={'/'}>Home</Link></li>
+                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 ${isActive('/products') && 'text-[#fd7933]'}`} href={'/products'}>Products</Link></li>
+                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 ${isActive('/profile') && 'text-[#fd7933]'}`} href={'/profile'}>My Profile</Link></li>
                             </ul>
 
                             {/* Mobile Menu */}
                             <ul
-                                className={`absolute lg:hidden w-full left-0 top-full bg-[#fefaeb] px-4 py-6 flex flex-col
+                                className={`absolute lg:hidden w-full left-0 top-full bg-[#FFF7ED] px-4 py-6 flex flex-col
                                 transform transition-all duration-300 ease-in-out space-y-3.5
 
                                 ${open
@@ -60,27 +59,35 @@ const Navbar = () => {
                                     }`}
                             >
 
-                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/') && 'text-[#fd7933]'}`} href={'/'}>Home</Link></li>
-                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/products') && 'text-[#fd7933]'}`} href={'/products'}>Products</Link></li>
-                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/profile') && 'text-[#fd7933]'}`} href={'/profile'}>My Profile</Link></li>
+                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 ${isActive('/') && 'text-[#fd7933]'}`} href={'/'}>Home</Link></li>
+                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 ${isActive('/products') && 'text-[#fd7933]'}`} href={'/products'}>Products</Link></li>
+                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 ${isActive('/profile') && 'text-[#fd7933]'}`} href={'/profile'}>My Profile</Link></li>
 
                                 {/* Free Designs btn for mobile */}
-                                <div className="flex justify-center md:hidden mt-2 gap-2">
-                                    <Button size="sm" className={' md:px-5 lg:px-6 xl:px-7'} leftIcon={<FiLogIn />} variant="outline" text={'Login'} />
-                                    <Button size="sm" className={' md:px-5 lg:px-6 xl:px-7'} rightIcon={<GoSignIn />} animated text={'Register'} />
-                                </div>
+                                {/* <div className="flex justify-center md:hidden mt-2 gap-2">
+                                    <Button size="sm" className={' px-5 lg:px-6 xl:px-7'} leftIcon={<FiLogIn />} variant="outline" text={'Login'} />
+                                    <Button size="sm" className={' px-5 lg:px-6 xl:px-7'} leftIcon={<FiLogIn />} animated animatedSpanOne={'animate-ping'} text={'Register'} />
+                                </div> */}
                             </ul>
 
                             {/* Icons for desktop */}
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-2 sm:gap-4">
 
-                                {/* Free Designs btn */}
-                                <div className="hidden md:block">
+                                <div className="flex gap-1 sm:gap-2">
+                                    <div className="border-2 border-orange-300 w-10 h-10 flex items-center justify-center rounded-full text-white">
+                                        <FaUserAstronaut className="text-2xl text-black" />
+                                    </div>
+                                        <Button size="sm" className={' md:px-5 lg:px-6 xl:px-7'} leftIcon={<MdLogout />} variant="ghost" text={'Logout'} />
+
+                                </div>
+
+                                {/* Free Designs btn for desktop */}
+                                {/* <div className="hidden md:block">
                                     <div className="flex gap-2">
                                         <Button size="sm" className={' md:px-5 lg:px-6 xl:px-7'} leftIcon={<FiLogIn />} variant="outline" text={'Login'} />
-                                        <Button size="sm" className={' md:px-5 lg:px-6 xl:px-7'} rightIcon={<GoSignIn />} animated text={'Register'} />
+                                        <Button size="sm" className={' md:px-5 lg:px-6 xl:px-7'} leftIcon={<FiLogIn />} animated animatedSpanOne={'animate-ping'} text={'Register'} />
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div
                                     onClick={handleMenu}
