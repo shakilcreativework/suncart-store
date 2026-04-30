@@ -60,9 +60,9 @@ const Navbar = () => {
                                     }`}
                             >
 
-                                <li><Link className="block font-medium text-sm" href={'/'}>Home</Link></li>
-                                <li><Link className="block font-medium text-sm" href={'/products'}>Products</Link></li>
-                                <li><Link className="block font-medium text-sm" href={'/profile'}>My Profile</Link></li>
+                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/') && 'text-[#fd7933]'}`} href={'/'}>Home</Link></li>
+                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/products') && 'text-[#fd7933]'}`} href={'/products'}>Products</Link></li>
+                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/profile') && 'text-[#fd7933]'}`} href={'/profile'}>My Profile</Link></li>
 
                                 {/* Free Designs btn for mobile */}
                                 <div className="flex justify-center md:hidden mt-2 gap-2">
