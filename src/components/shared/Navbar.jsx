@@ -11,6 +11,7 @@ import { FiLogIn } from "react-icons/fi";
 import { usePathname } from "next/navigation";
 import { FaUserAstronaut } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
+import Logo from "../ui/Logo";
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -32,14 +33,7 @@ const Navbar = () => {
                         <div className="flex justify-between items-center w-full">
 
                             {/* Logo */}
-                            <Link href={'/'}>
-                                <div className="flex items-center justify-center gap-2">
-                                    <div className="bg-linear-to-br from-amber-300 via-orange-400 to-sky-400 w-10 h-10 flex items-center justify-center rounded-full text-white">
-                                        <IoIosSunny className="text-3xl" />
-                                    </div>
-                                    <span className="text-[#0c2842] font-bold text-xl">Sun<span className="text-[#fd7933]">Cart</span></span>
-                                </div>
-                            </Link>
+                            <Logo />
 
                             {/* Desktop Menu */}
                             <ul className="hidden lg:flex gap-4 lg:gap-6 items-center">
