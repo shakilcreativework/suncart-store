@@ -12,6 +12,7 @@ const Footer = () => {
             <div className="py-16">
                 <Container>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 lg:gap-5">
+                        {/* logo */}
                         <div className="flex flex-col items-start space-y-4">
                             <Logo className={'text-white'} />
                             <p className="font-normal text-sm">Your one-stop shop for everything that makes summer feel like summer.</p>
