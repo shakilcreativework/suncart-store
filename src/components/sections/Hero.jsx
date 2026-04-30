@@ -34,6 +34,7 @@ const Hero = () => {
                             <Button text={'Hot Deals'} leftIcon={<BsFire className="text-[#fd7933]" />} className={'text-slate-800 bg-white'} />
                         </div>
                     </div>
+                    
                     <div className="relative rounded-2xl bg-linear-to-br from-amber-300 via-orange-400 to-sky-400 p-2">
                             <Image width={500} height={400} className="w-full rounded-2xl " src={'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80'} alt="Beach" priority />
                             <div className="absolute bottom-6 left-6 lg:-bottom-9 lg:-left-24 bg-white rounded-xl flex gap-2 p-5 text-start justify-center items-center text-[#0C2842] shadow-md">
