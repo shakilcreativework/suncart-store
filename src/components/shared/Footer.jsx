@@ -46,14 +46,14 @@ const Footer = () => {
                         <div className="space-y-4">
                             <h3 className="font-semibold text-lg text-white">Follow the Sun</h3>
                             <div className="flex gap-2">
-                                <div className=" hover:text-white/70 bg-linear-to-br from-amber-300/80 via-orange-400/80 to-sky-400/80 hover:from-amber-300 hover:via-orange-400 hover:to-sky-400 w-10 h-10 flex items-center justify-center rounded-full text-white">
-                                    <LuInstagram className="text-xl" />
+                                <div className=" hover:text-white/70 bg-linear-to-br from-amber-300/80 via-orange-400/80 to-sky-400/80 hover:from-amber-300 hover:via-orange-400 hover:to-sky-400 w-8 h-8 flex items-center justify-center rounded-full text-white">
+                                    <LuInstagram className="text-lg" />
                                 </div>
-                                <div className=" hover:text-white/70 bg-linear-to-br from-amber-300/80 via-orange-400/80 to-sky-400/80 hover:from-amber-300 hover:via-orange-400 hover:to-sky-400 w-10 h-10 flex items-center justify-center rounded-full text-white">
-                                    <CiTwitter className="text-xl" />
+                                <div className=" hover:text-white/70 bg-linear-to-br from-amber-300/80 via-orange-400/80 to-sky-400/80 hover:from-amber-300 hover:via-orange-400 hover:to-sky-400 w-8 h-8 flex items-center justify-center rounded-full text-white">
+                                    <CiTwitter className="text-lg" />
                                 </div>
-                                <div className=" hover:text-white/70 bg-linear-to-br from-amber-300/80 via-orange-400/80 to-sky-400/80 hover:from-amber-300 hover:via-orange-400 hover:to-sky-400 w-10 h-10 flex items-center justify-center rounded-full text-white">
-                                    <FaFacebookF className="text-xl" />
+                                <div className=" hover:text-white/70 bg-linear-to-br from-amber-300/80 via-orange-400/80 to-sky-400/80 hover:from-amber-300 hover:via-orange-400 hover:to-sky-400 w-8 h-8 flex items-center justify-center rounded-full text-white">
+                                    <FaFacebookF className="text-lg" />
                                 </div>
                             </div>
                         </div>
