@@ -18,3 +18,72 @@
 | Footer     | bg-[#0C2842] text-white                                       | */
 
 /* bg-linear-to-br from-red-300 via-red-400 to-red-500 bg-clip-text text-transparent */
+
+/* suncart/ */
+/* │ */
+/* ├── app/                      # Next.js App Router */
+/* │   ├── layout.js            # Global layout (Navbar + Footer) */
+/* │   ├── page.js              # Home page */
+/* │ */
+/* │   ├── products/ */
+/* │   │   ├── page.js          # All products page */
+/* │   │   └── [id]/ */
+/* │   │       └── page.js      # Product details (protected) */
+/* │ */
+/* │   ├── login/ */
+/* │   │   └── page.js          # Login page */
+/* │ */
+/* │   ├── register/ */
+/* │   │   └── page.js          # Register page */
+/* │ */
+/* │   ├── profile/ */
+/* │   │   └── page.js          # My profile */
+/* │ */
+/* │   ├── update-profile/ */
+/* │   │   └── page.js          # Update user info */
+/* │ */
+/* │   └── globals.css          # Global styles */
+/* │ */
+/* ├── components/              # Reusable UI components */
+/* │   ├── shared/ */
+/* │   │   ├── Navbar.jsx */
+/* │   │   ├── Footer.jsx */
+/* │   │ */
+/* │   ├── ui/ */
+/* │   │   ├── ProductCard.jsx */
+/* │   │   ├── Button.jsx */
+/* │   │   ├── Loader.jsx */
+/* │   │ */
+/* │   ├── sections/ */
+/* │   │   ├── Hero.jsx */
+/* │   │   ├── PopularProducts.jsx */
+/* │   │   ├── SummerTips.jsx */
+/* │   │   ├── TopBrands.jsx */
+/* │ */
+/* │   └── auth/ */
+/* │       ├── ProtectedRoute.jsx */
+/* │       ├── AuthProvider.jsx */
+/* │ */
+/* ├── data/                    # Static data */
+/* │   └── products.json */
+/* │ */
+/* ├── lib/                     # Logic / config */
+/* │   ├── auth.js              # BetterAuth config */
+/* │   ├── utils.js             # helper functions */
+/* │ */
+/* ├── hooks/                   # Custom hooks (optional but pro) */
+/* │   ├── useAuth.js */
+/* │   ├── useProducts.js */
+/* │ */
+/* ├── public/                  # Images / assets */
+/* │   ├── images/ */
+/* │   ├── icons/ */
+/* │ */
+/* ├── styles/                  # Extra styling (optional) */
+/* │   └── animations.css */
+/* │ */
+/* ├── .env.local               # Environment variables */
+/* ├── tailwind.config.js */
+/* ├── postcss.config.js */
+/* ├── package.json */
+/* ├── README.md */
