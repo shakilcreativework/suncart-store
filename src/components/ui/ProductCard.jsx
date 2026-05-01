@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
                 </div>
                 <div className="flex justify-between items-center">
                     <h1 className="text-[#fd7933] font-bold text-2xl">${price.toFixed(2)}</h1>
-                    <Button text={'View Details'} size="sm" animated animatedSpanOne={'animate-ping'} />
+                    <Button as="link" href={`/products/${id}`} text={'View Details'} size="sm" animated animatedSpanOne={'animate-ping'} />
                 </div>
             </div>
         </div>

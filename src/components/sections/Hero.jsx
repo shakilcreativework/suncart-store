@@ -21,8 +21,8 @@ const Hero = () => {
                         <h1 className="font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#0c2842]">Summer Sale <br className="hidden lg:block" /><span className="text-red-700">50%</span> OFF</h1>
                         <p className="text-slate-700 text-base md:text-lg">Shades, sunscreen, snorkels, and more. Everything you <br className="hidden lg:block" />need to chase the sun — in one cart.</p>
                         <div className="flex gap-2 mx-auto md:mx-0">
-                            <Button text={'Shop Now'} leftIcon={<LuShoppingBag />} animated animatedSpanOne={'animate-ping'} className={'text-white'} />
-                            <Button text={'Hot Deals'} leftIcon={<BsFire className="text-[#fd7933]" />} className={'text-slate-800 bg-white'} />
+                            <Button as="link" href={'/products'} text={'Shop Now'} leftIcon={<LuShoppingBag />} animated animatedSpanOne={'animate-ping'} className={'text-white'} />
+                            <Button as="link" href={'/products'} text={'Hot Deals'} leftIcon={<BsFire className="text-[#fd7933]" />} className={'text-slate-800 bg-white'} />
                         </div>
                     </div>
                     
