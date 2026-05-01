@@ -11,7 +11,7 @@ const PopularProducts = async () => {
         <div className="py-20">
             <Container>
                 <SectionTitle paraTitle={'Trending Now'} HeadingTitle={'Popular this summer'} />
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:4 md:gap-5 mt-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-5 lg:gap-6 mt-10">
                     {
                         products.slice(0, 3).map(product => <ProductCard key={product.id} product={product} />)
                     }
