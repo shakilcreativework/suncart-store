@@ -5,7 +5,6 @@ import { getProducts } from "@/lib/actions";
 
 const ProductsPage = async () => {
     const products = await getProducts();
-    // console.log(products);
 
     return (
         <div className="py-20">
