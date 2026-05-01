@@ -27,8 +27,9 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="bg-[#FFF7ED] backdrop-blur-md sticky top-0 py-2.5 z-50 shadow-xs">
-                <nav className="relative">
+            {/* <div className="bg-[#FFF7ED] backdrop-blur-md sticky top-0 py-2.5 z-50 shadow-xs"> */}
+            <div className="fixed top-0 w-full z-50 py-2.5 backdrop-blur-md bg-[#FFF7ED]/90 shadow-xs">
+                <nav>
                     <Container>
                         <div className="flex justify-between items-center w-full">
 

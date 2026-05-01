@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-dvh flex flex-col bg-[#FFF7ED]">
         <Navbar />
-        <div className="flex-1">
+        <div className="flex-1 pt-15">
           {children}
         </div>
         <Footer />
