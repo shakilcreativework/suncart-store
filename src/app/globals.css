@@ -16,3 +16,5 @@
 | Highlight  | bg-[#FEF3C7]                                                  |
 | Card       | bg-white shadow-sm border border-[#F3E8D5]                    |
 | Footer     | bg-[#0C2842] text-white                                       | */
+
+/* bg-linear-to-br from-red-300 via-red-400 to-red-500 bg-clip-text text-transparent */

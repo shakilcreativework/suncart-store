@@ -8,12 +8,12 @@ import { CiTwitter } from "react-icons/ci";
 
 const Footer = () => {
     return (
-        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white/60">
+        <div className="bg-linear-to-r from-slate-900 via-slate-800 to-slate-900 text-white/60">
             <div className="py-16">
                 <Container>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 lg:gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-4 gap-10 md:gap-3 lg:gap-5">
                         {/* logo */}
-                        <div className="flex flex-col items-start space-y-4">
+                        <div className="flex flex-col items-start space-y-4 md:col-span-2 lg:col-auto">
                             <Logo className={'text-white'} />
                             <p className="font-normal text-sm">Your one-stop shop for everything that makes summer feel like summer.</p>
                         </div>

@@ -13,21 +13,12 @@ const Hero = () => {
             <span className="absolute inset-0 bg-white/10 backdrop-blur-sm pointer-events-none z-0"></span>
 
             <Container>
-                {/* Content */}
-                {/* <div className="relative z-10">
-                <h1 className="text-4xl font-bold mb-4">Summer Sale 50% OFF ☀️</h1>
-                <p className="mb-6">Hot Deals 🔥 on all essentials</p>
-                <button className="bg-white text-orange-500 px-6 py-2 rounded-full font-semibold hover:bg-gray-100">
-                    Shop Now
-                </button>
-
-            </div> */}
                 <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-0 z-10 justify-center items-center">
                     <div className="flex flex-col md:text-start space-y-5">
                         <div>
                             <Button text={'NEW SUMMER COLLECTION'} className={'uppercase bg-gray-100 text-[#fd7933] py-1'} leftIcon={<FaMagic />} />
                         </div>
-                        <h1 className="font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#0c2842]">Summer Sale <br className="hidden lg:block" /><span className="">50% OFF</span></h1>
+                        <h1 className="font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#0c2842]">Summer Sale <br className="hidden lg:block" /><span className="text-red-700">50%</span> OFF</h1>
                         <p className="text-slate-700 text-base md:text-lg">Shades, sunscreen, snorkels, and more. Everything you <br className="hidden lg:block" />need to chase the sun — in one cart.</p>
                         <div className="flex gap-2 mx-auto md:mx-0">
                             <Button text={'Shop Now'} leftIcon={<LuShoppingBag />} animated animatedSpanOne={'animate-ping'} className={'text-white'} />
@@ -35,7 +26,7 @@ const Hero = () => {
                         </div>
                     </div>
                     
-                    <div className="relative rounded-2xl bg-linear-to-br from-amber-300 via-orange-400 to-sky-400 p-2">
+                    <div className="relative rounded-2xl bg-linear-to-br from-amber-300 via-orange-400 to-sky-400 p-2 shadow-xs">
                             <Image width={500} height={400} className="w-full rounded-2xl " src={'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80'} alt="Beach" priority />
                             <div className="absolute bottom-6 left-6 lg:-bottom-9 lg:-left-24 bg-white rounded-xl flex gap-2 p-5 text-start justify-center items-center text-[#0C2842] shadow-md">
                                 <div>
