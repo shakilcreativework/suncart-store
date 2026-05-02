@@ -105,7 +105,7 @@ const SignInPage = () => {
                             {/* Divider */}
                             <div className="flex items-center gap-3">
                                 <div className="flex-1 h-px bg-gray-200" />
-                                <span className="text-sm text-gray-400">OR</span>
+                                <span className="text-sm text-[#6B7280]">OR</span>
                                 <div className="flex-1 h-px bg-gray-200" />
                             </div>
 
@@ -113,7 +113,7 @@ const SignInPage = () => {
                             <Button
                                 type="button"
                                 className="w-full py-3 rounded-2xl font-medium 
-                bg-[#f5f1e6] text-gray-700 border border-gray-200 
+                bg-[#f5f1e6] text-[#6B7280] border border-gray-200 
                 hover:bg-[#ece6d8] transition-all flex items-center justify-center gap-2"
                             >
                                 <Image
