@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import Button from "./Button";
 
 const ProductCard = ({ product }) => {
-    console.log(product);
+    // console.log(product);
 
     const { id, name, brand, price, rating, stock, description, image, category } = product;
 
