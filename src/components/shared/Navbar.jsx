@@ -54,9 +54,9 @@ const Navbar = () => {
                                     }`}
                             >
 
-                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 ${isActive('/') && 'text-[#fd7933]'}`} href={'/'}>Home</Link></li>
-                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 ${isActive('/products') && 'text-[#fd7933]'}`} href={'/products'}>Products</Link></li>
-                                <li><Link className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 ${isActive('/profile') && 'text-[#fd7933]'}`} href={'/profile'}>My Profile</Link></li>
+                                <li><Link onClick={() => setOpen(false)} className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 block ${isActive('/') && 'text-[#fd7933]'}`} href={'/'}>Home</Link></li>
+                                <li><Link onClick={() => setOpen(false)} className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 block ${isActive('/products') && 'text-[#fd7933]'}`} href={'/products'}>Products</Link></li>
+                                <li><Link onClick={() => setOpen(false)} className={`font-medium text-sm hover:text-[#fd7933] transition-all duration-300 block ${isActive('/profile') && 'text-[#fd7933]'}`} href={'/profile'}>My Profile</Link></li>
 
                                 {/* Free Designs btn for mobile */}
                                 {/* <div className="flex justify-center md:hidden mt-2 gap-2">
