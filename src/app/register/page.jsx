@@ -16,6 +16,7 @@ import {
 import Link from "next/link";
 import { IoIosSunny } from "react-icons/io";
 import Image from "next/image";
+import toast from "react-hot-toast";
 
 const SignUpPage = () => {
   const [loading, setLoading] = useState(false);
@@ -38,12 +39,12 @@ const SignUpPage = () => {
       const { data, error } = await authClient.signUp.email(userData);
 
       if (error) {
-        alert(error.message || "Signup failed!");
+        toast.error(error.message || "Signup failed!");
       } else {
-        alert("Account created successfully!");
+        toast.success("Account created successfully!");
       }
     } catch (err) {
-      alert("Something went wrong!");
+      toast("Something went wrong!");
     } finally {
       setLoading(false);
     }
