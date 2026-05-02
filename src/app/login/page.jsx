@@ -18,7 +18,7 @@ import { IoIosSunny } from "react-icons/io";
 import Image from "next/image";
 import toast from "react-hot-toast";
 
-const SignUpPage = () => {
+const SignInPage = () => {
     const [loading, setLoading] = useState(false);
 
     const onSubmit = async (e) => {
@@ -49,9 +49,9 @@ const SignUpPage = () => {
     };
 
     return (
-        <div className="py-20 flex flex-col justify-center items-center bg-linear-to-r from-yellow-100 via-orange-100 to-yellow-200">
+        <div className="min-h-dvh py-20 flex flex-col justify-center items-center bg-linear-to-r from-yellow-100 via-orange-100 to-yellow-200">
             <Container>
-                <div className="flex flex-col items-center bg-white p-8 rounded-3xl shadow-md">
+                <div className="flex flex-col items-center bg-white p-6 lg:p-8 rounded-3xl shadow-md">
 
                     {/* Header */}
                     <div className="mb-10 flex flex-col items-center space-y-3">
@@ -69,7 +69,7 @@ const SignUpPage = () => {
                     </div>
 
                     {/* Form */}
-                    <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
+                    <Form className="flex w-66 sm:w-96 md:max-w-md flex-col gap-4" onSubmit={onSubmit}>
 
                         {/* Email */}
                         <TextField isRequired name="email" type="email">
@@ -142,4 +142,4 @@ const SignUpPage = () => {
     );
 };
 
-export default SignUpPage;
+export default SignInPage;
