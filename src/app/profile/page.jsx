@@ -2,13 +2,18 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import { Mail, User, Pencil } from "lucide-react";
+import { authClient } from "@/lib/auth-client";
+import { Avatar } from "@heroui/react";
 import Image from "next/image";
 import { BsFillPencilFill } from "react-icons/bs";
 import { FiUserCheck } from "react-icons/fi";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 
 export default function ProfileCard() {
+
+    const { data: session } = authClient.useSession();
+    // console.log(session);
+
     return (
         <div className="min-h-dvh flex items-center justify-center bg-linear-to-r from-yellow-100 via-orange-100 to-yellow-200 p-4">
             <div className="w-full max-w-2xl rounded-3xl shadow-xl overflow-hidden bg-white">
@@ -18,27 +23,44 @@ export default function ProfileCard() {
 
                     {/* Avatar */}
                     <div className="absolute -bottom-10 left-6 w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-md overflow-hidden">
-                        <Image
-                            width={36}
-                            height={36}
-                            priority
-                            src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3" // put your image in /public
-                            alt="avatar"
-                            className="w-full h-full object-cover"
-                        />
+
+                        {session?.user?.image ? (
+                            <Image
+                                src={session?.user?.image}
+                                alt="avatar"
+                                width={40}
+                                height={40}
+                                priority
+                                className="w-full h-full object-cover"
+                            />
+                        ) : (
+                            <Avatar className="w-full h-full">
+                                <Avatar.Image
+                                    src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3"
+                                    alt="avatar"
+                                    className="w-full h-full object-cover"
+                                    referrerPolicy="no-referrer"
+                                />
+                                <Avatar.Fallback className="flex items-center justify-center text-3xl font-semibold">
+                                    JD
+                                </Avatar.Fallback>
+                            </Avatar>
+                        )}
+
+
                     </div>
                 </div>
 
                 {/* Content */}
                 <div className="pt-14 pb-6 px-6">
                     <h2 className="text-2xl font-semibold text-gray-800">
-                        Md Jakir Hossain
+                        {session?.user?.name}
                     </h2>
 
                     <div className="flex items-center gap-2 text-[#6B7280]">
                         <MdOutlineMarkEmailRead />
                         <span className="text-sm">
-                            jakircreativedesign@gmail.com
+                            {session?.user?.email}
                         </span>
                     </div>
 
@@ -49,15 +71,15 @@ export default function ProfileCard() {
                             <p className="text-xs text-[#6B7280] mb-2">DISPLAY NAME</p>
                             <div className="flex items-center gap-2 text-gray-700 font-medium">
                                 <FiUserCheck />
-                                Md Jakir Hossain
+                                {session?.user?.name}
                             </div>
                         </div>
 
                         <div className="bg-gray-100 rounded-2xl p-4">
                             <p className="text-xs text-[#6B7280] mb-2">EMAIL</p>
-                            <div className="flex items-center gap-2 text-gray-700 font-medium">
+                            <div className="flex items-center gap-2 text-gray-700 font-medium line-clamp-1">
                                 <MdOutlineMarkEmailRead />
-                                jakircreativedesign@gmail.com
+                                {session?.user?.email}
                             </div>
                         </div>
 

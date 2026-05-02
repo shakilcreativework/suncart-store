@@ -17,8 +17,10 @@ import { IoIosSunny } from "react-icons/io";
 import Image from "next/image";
 import toast from "react-hot-toast";
 import Container from "@/components/shared/Container";
+import { useRouter } from "next/navigation";
 
 const SignUpPage = () => {
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e) => {
@@ -42,6 +44,7 @@ const SignUpPage = () => {
         toast.error(error.message || "Signup failed!");
       } else {
         toast.success("Account created successfully!");
+        router.push("/")
       }
     } catch (err) {
       toast("Something went wrong!");

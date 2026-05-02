@@ -32,6 +32,8 @@ const SignInPage = () => {
             const userData = {
                 email: rawData.email?.toString().trim(),
                 password: rawData.password?.toString(),
+                rememberMe: true,
+                callbackURL: "/",
             };
 
             const { data, error } = await authClient.signIn.email(userData);
@@ -127,7 +129,7 @@ const SignInPage = () => {
                                 Continue with Google
                             </Button>
 
-                            {/* Login */}
+                            {/* register */}
                             <p className="text-[#6B7280] font-medium text-sm text-center">
                                 Don&apos;t have an account?{" "}
                                 <Link href="/register" className="text-[#fd7933]">
