@@ -8,4 +8,3 @@ const ProfileUpdatePage = () => {
 };
 
 export default ProfileUpdatePage;
-

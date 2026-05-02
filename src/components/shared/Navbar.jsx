@@ -12,10 +12,13 @@ import { usePathname } from "next/navigation";
 import { FaUserAstronaut } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
 import Logo from "../ui/Logo";
+import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
     const pathname = usePathname();
     const [open, setOpen] = useState(false);
+    const userInfo = authClient.useSession();
+    console.log(userInfo?.data);
 
     // isActive function
     const isActive = (path) => pathname === path;

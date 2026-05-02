@@ -21,6 +21,7 @@ export default function ProfileCard() {
                         <Image
                             width={36}
                             height={36}
+                            priority
                             src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3" // put your image in /public
                             alt="avatar"
                             className="w-full h-full object-cover"
@@ -64,7 +65,7 @@ export default function ProfileCard() {
 
                     {/* Button */}
                     <div className="mt-6">
-                        <Button text={'Update Profile'} leftIcon={<BsFillPencilFill />} animated animatedSpanOne={'animate-ping'} />
+                        <Button as="link" href={'/update-profile'} text={'Update Profile'} leftIcon={<BsFillPencilFill />} animated animatedSpanOne={'animate-ping'} />
                     </div>
                 </div>
             </div>
