@@ -87,19 +87,19 @@ const Navbar = () => {
                                     }`}
                             >
                                 <li>
-                                    <Link onClick={() => setOpen(false)} className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/') && 'text-[#fd7933]'}`} href="/">
+                                    <Link onClick={() => setOpen(false)} className={`block font-medium text-sm hover:text-[#fd7933] ${isActive('/') && 'text-[#fd7933]'}`} href="/">
                                         Home
                                     </Link>
                                 </li>
 
                                 <li>
-                                    <Link onClick={() => setOpen(false)} className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/products') && 'text-[#fd7933]'}`} href="/products">
+                                    <Link onClick={() => setOpen(false)} className={`block font-medium text-sm hover:text-[#fd7933] ${isActive('/products') && 'text-[#fd7933]'}`} href="/products">
                                         Products
                                     </Link>
                                 </li>
                                 {session?.user &&
                                     <li>
-                                        <Link onClick={() => setOpen(false)} className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/profile') && 'text-[#fd7933]'}`} href="/profile">
+                                        <Link onClick={() => setOpen(false)} className={`block font-medium text-sm hover:text-[#fd7933] ${isActive('/profile') && 'text-[#fd7933]'}`} href="/profile">
                                             My Profile
                                         </Link>
                                     </li>
