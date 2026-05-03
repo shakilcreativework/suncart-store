@@ -1,6 +1,7 @@
 
 "use client";
 
+
 import Link from "next/link";
 import Container from "./Container";
 import Button from "../ui/Button";
@@ -14,6 +15,7 @@ import Logo from "../ui/Logo";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import { Avatar } from "@heroui/react";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -36,6 +38,7 @@ const Navbar = () => {
             fetchOptions: {
                 onSuccess: () => {
                     router.push("/login");
+                    toast.success("Account logout successfully!");
                 },
             },
         });

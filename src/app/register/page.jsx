@@ -47,7 +47,7 @@ const SignUpPage = () => {
         router.push("/")
       }
     } catch (err) {
-      toast("Something went wrong!");
+      toast.error("Something went wrong!");
     } finally {
       setLoading(false);
     }
@@ -55,10 +55,19 @@ const SignUpPage = () => {
 
   // google signup and login
   const handleGoogleSignIn = async () => {
-    const data = await authClient.signIn.social({
-      provider: "google",
-    });
-    console.log(data);
+
+    try {
+      const data = await authClient.signIn.social({
+        provider: "google",
+      });
+
+      // Some auth libraries redirect immediately, so this may not run
+      if (data) {
+        toast.success("Signup successful");
+      }
+    } catch (error) {
+      toast.error("Something went wrong");
+    }
   };
 
   return (

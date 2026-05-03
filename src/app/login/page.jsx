@@ -44,7 +44,7 @@ const SignInPage = () => {
                 toast.success("Account login successfully!");
             }
         } catch (err) {
-            toast("Something went wrong!");
+            toast.error("Something went wrong!");
         } finally {
             setLoading(false);
         }
@@ -52,9 +52,19 @@ const SignInPage = () => {
 
     // google signup and login
     const handleGoogleSignIn = async () => {
-        const data = await authClient.signIn.social({
-            provider: "google",
-        });
+
+        try {
+            const data = await authClient.signIn.social({
+                provider: "google",
+            });
+
+            // Some auth libraries redirect immediately, so this may not run
+            if (data) {
+                toast.success("Login successful");
+            }
+        } catch (error) {
+            toast.error("Something went wrong");
+        }
     };
 
     return (
