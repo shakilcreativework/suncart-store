@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -25,7 +24,12 @@ const SignUpPage = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
+    if (loading) return;
     setLoading(true);
+
+    // 🔄 show loading toast
+    const toastId = toast.loading("Creating account...");
 
     try {
       const formData = new FormData(e.currentTarget);
@@ -38,35 +42,46 @@ const SignUpPage = () => {
         password: rawData.password?.toString(),
       };
 
-      const { data, error } = await authClient.signUp.email(userData);
+      const { error } = await authClient.signUp.email(userData);
 
       if (error) {
+        toast.dismiss(toastId);
         toast.error(error.message || "Signup failed!");
-      } else {
-        toast.success("Account created successfully!");
-        router.push("/")
+        return;
       }
+
+      // ✅ success flow
+      toast.dismiss(toastId);
+      toast.success("Account created successfully 🎉");
+
+      // ⏳ smooth delay for UX
+      setTimeout(() => {
+        router.push("/");
+      }, 1200);
+
     } catch (err) {
+      toast.dismiss(toastId);
       toast.error("Something went wrong!");
     } finally {
       setLoading(false);
     }
   };
 
-  // google signup and login
+  // ✅ Google login (clean & correct)
   const handleGoogleSignIn = async () => {
-
     try {
-      const data = await authClient.signIn.social({
+      // 🔄 optional loading feedback
+      const toastId = toast.loading("Redirecting to Google...");
+
+      await authClient.signIn.social({
         provider: "google",
+        callbackURL: "/",
       });
 
-      // Some auth libraries redirect immediately, so this may not run
-      if (data) {
-        toast.success("Signup successful");
-      }
+      // ❌ no success toast (redirect happens)
+
     } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Google signup failed!");
     }
   };
 
@@ -93,28 +108,24 @@ const SignUpPage = () => {
           {/* Form */}
           <Form className="flex flex-col w-66 sm:w-96 md:max-w-md gap-4" onSubmit={onSubmit}>
 
-            {/* Name */}
             <TextField isRequired name="name">
               <Label>Name</Label>
               <Input placeholder="Sunny Summers" />
               <FieldError />
             </TextField>
 
-            {/* Email */}
             <TextField isRequired name="email" type="email">
               <Label>Email</Label>
               <Input placeholder="you@summer.com" />
               <FieldError />
             </TextField>
 
-            {/* Image URL */}
             <TextField name="image">
               <Label>Photo URL</Label>
               <Input placeholder="https://..." />
               <FieldError />
             </TextField>
 
-            {/* Password */}
             <TextField isRequired name="password" type="password">
               <Label>Password</Label>
               <Input placeholder="Enter your password" />
@@ -124,10 +135,8 @@ const SignUpPage = () => {
               <FieldError />
             </TextField>
 
-            {/* Actions */}
             <div className="flex flex-col gap-4 mt-2">
 
-              {/* Register Button */}
               <Button
                 type="submit"
                 isDisabled={loading}
@@ -138,14 +147,12 @@ const SignUpPage = () => {
                 {loading ? "Registering..." : "Register"}
               </Button>
 
-              {/* Divider */}
               <div className="flex items-center gap-3">
                 <div className="flex-1 h-px bg-gray-200" />
                 <span className="text-sm text-[#6B7280]">OR</span>
                 <div className="flex-1 h-px bg-gray-200" />
               </div>
 
-              {/* Google Button */}
               <Button
                 onClick={handleGoogleSignIn}
                 type="button"
@@ -164,7 +171,6 @@ const SignUpPage = () => {
                 Continue with Google
               </Button>
 
-              {/* Login */}
               <p className="text-[#6B7280] font-medium text-sm text-center">
                 Already have an account?{" "}
                 <Link href="/login" className="text-[#fd7933]">
