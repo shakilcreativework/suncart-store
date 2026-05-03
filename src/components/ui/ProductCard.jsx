@@ -15,6 +15,7 @@ const ProductCard = ({ product }) => {
                     width={300}
                     height={400}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    priority
                     src={image}
                     alt={name}
                 />

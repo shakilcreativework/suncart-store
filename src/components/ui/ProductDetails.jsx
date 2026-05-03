@@ -4,7 +4,7 @@ import Button from "./Button";
 import { LuShoppingBag } from "react-icons/lu";
 
 const ProductDetails = ({ product }) => {
-    console.log(product);
+    // console.log(product);
 
     const { id, name, brand, price, rating, stock, description, image, category } = product;
 

@@ -135,7 +135,7 @@ const Navbar = () => {
                                                 <Link href={'/profile'}>
                                                     <Avatar className="w-full h-full">
                                                         <Avatar.Image
-                                                            src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3"
+                                                            src="https://i.ibb.co.com/vtpJ1J0/user.png"
                                                             alt="avatar"
                                                             className="w-full h-full object-cover"
                                                         />
