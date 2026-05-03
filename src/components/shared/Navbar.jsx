@@ -20,6 +20,7 @@ const Navbar = () => {
     const router = useRouter();
     const [open, setOpen] = useState(false);
     const { data: session } = authClient.useSession();
+    console.log(session);
 
     // active link
     const isActive = (path) => pathname === path;

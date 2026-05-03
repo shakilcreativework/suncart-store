@@ -53,6 +53,14 @@ const SignUpPage = () => {
     }
   };
 
+  // google signup and login
+  const handleGoogleSignIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+    console.log(data);
+  };
+
   return (
     <div className="min-h-dvh py-20 flex flex-col justify-center items-center bg-linear-to-r from-yellow-100 via-orange-100 to-yellow-200">
       <Container>
@@ -130,6 +138,7 @@ const SignUpPage = () => {
 
               {/* Google Button */}
               <Button
+                onClick={handleGoogleSignIn}
                 type="button"
                 className="w-full py-3 rounded-2xl font-medium 
                 bg-[#f5f1e6] text-[#6B7280] border border-gray-200 
