@@ -1,7 +1,7 @@
-
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Container from "@/components/shared/Container";
 import { authClient } from "@/lib/auth-client";
 import {
@@ -20,6 +20,7 @@ import toast from "react-hot-toast";
 
 const SignInPage = () => {
     const [loading, setLoading] = useState(false);
+    const router = useRouter(); // ✅ added
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -33,16 +34,24 @@ const SignInPage = () => {
                 email: rawData.email?.toString().trim(),
                 password: rawData.password?.toString(),
                 rememberMe: true,
-                callbackURL: "/",
+                callbackURL: "/", // ✅ keep this
             };
 
-            const { data, error } = await authClient.signIn.email(userData);
+            const { error } = await authClient.signIn.email(userData);
 
             if (error) {
                 toast.error(error.message || "Login failed!");
-            } else {
-                toast.success("Account login successfully!");
+                return; // ✅ stop execution
             }
+
+            // ✅ success toast
+            toast.success("Login successful!");
+
+            // ✅ delay so user can SEE toast
+            setTimeout(() => {
+                router.push("/");
+            }, 1200);
+
         } catch (err) {
             toast.error("Something went wrong!");
         } finally {
@@ -52,18 +61,16 @@ const SignInPage = () => {
 
     // google signup and login
     const handleGoogleSignIn = async () => {
-
         try {
-            const data = await authClient.signIn.social({
+            await authClient.signIn.social({
                 provider: "google",
+                callbackURL: "/", // ✅ IMPORTANT
             });
+            
+            // ❌ DO NOT toast here (redirect happens instantly)
 
-            // Some auth libraries redirect immediately, so this may not run
-            if (data) {
-                toast.success("Login successful");
-            }
         } catch (error) {
-            toast.error("Something went wrong");
+            toast.error("Google login failed!");
         }
     };
 
@@ -110,15 +117,15 @@ const SignInPage = () => {
                         {/* Actions */}
                         <div className="flex flex-col gap-4 mt-2">
 
-                            {/* Register Button */}
+                            {/* Login Button */}
                             <Button
                                 type="submit"
                                 isDisabled={loading}
                                 className="w-full py-3 rounded-2xl font-semibold text-white 
-                bg-linear-to-r from-yellow-400 via-orange-400 to-red-400 
-                shadow-md hover:opacity-90 active:scale-[0.98] transition-all"
+                                bg-linear-to-r from-yellow-400 via-orange-400 to-red-400 
+                                shadow-md hover:opacity-90 active:scale-[0.98] transition-all"
                             >
-                                {loading ? "Login..." : "login"}
+                                {loading ? "Logging in..." : "Login"}
                             </Button>
 
                             {/* Divider */}
@@ -133,8 +140,8 @@ const SignInPage = () => {
                                 onClick={handleGoogleSignIn}
                                 type="button"
                                 className="w-full py-3 rounded-2xl font-medium 
-                bg-[#f5f1e6] text-[#6B7280] border border-gray-200 
-                hover:bg-[#ece6d8] transition-all flex items-center justify-center gap-2"
+                                bg-[#f5f1e6] text-[#6B7280] border border-gray-200 
+                                hover:bg-[#ece6d8] transition-all flex items-center justify-center gap-2"
                             >
                                 <Image
                                     width={20}
