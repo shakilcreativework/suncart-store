@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌞 SunCart – Summer Essentials Store
+![Project Preview](https://i.ibb.co.com/HLBxFby4/screencapture-localhost-3000-products-2026-05-03-11-11-27.png)
 
-## Getting Started
+## 📌 Project Overview
 
-First, run the development server:
+SunCart is a modern summer eCommerce web application where users can explore and purchase seasonal products like sunglasses, outfits, skincare items, and beach accessories.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This project is built with a focus on clean UI, authentication, and responsive design.
+
+---
+
+## 🚀 Live Site
+
+🔗 https://suncart-store.vercel.app
+
+---
+
+## 🎯 Key Features
+
+* 🔐 Authentication system (Email + Google Login)
+* 🛍️ Product listing from JSON data
+* 🔍 Protected Product Details page
+* 👤 User Profile system
+* ✏️ Update Profile functionality
+* 📱 Fully responsive (Mobile, Tablet, Desktop)
+* 🎨 Smooth animations using Animate.css
+* 🔔 Toast notifications for user feedback
+
+---
+
+## 🧩 Pages & Routes
+
+* Home Page
+* Products Page
+* Product Details (Protected)
+* Login Page
+* Register Page
+* My Profile Page
+* Update Profile Page
+
+---
+
+## 🏗️ Tech Stack
+
+* Next.js (App Router)
+* React
+* Tailwind CSS
+* DaisyUI / HeroUI
+* BetterAuth
+* MongoDB
+
+---
+
+## 📦 NPM Packages Used
+
+* animate.css (for animations)
+* better-auth (authentication system)
+* react-hot-toast (notifications)
+* clsx (conditional class handling)
+* tailwind-merge (merge Tailwind classes)
+* lucide-react (icons)
+* react-icons (icons)
+* mongodb (database)
+
+---
+
+## 🔐 Authentication Features
+
+* Email & Password Login
+* Google Social Login
+* Protected Routes
+* Redirect after login
+
+---
+
+## 📱 Responsiveness
+
+The application is fully responsive and works smoothly across:
+
+* Mobile Devices
+* Tablets
+* Desktop Screens
+
+---
+
+## 🌟 Extra Features (Bonus)
+
+* 👤 My Profile Page
+* ✏️ Update User Information
+* 🎬 Animate.css integration for UI effects
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file and add:
+
+```
+NEXT_PUBLIC_BASE_URL=your_url
+MONGODB_URI=your_mongodb_uri
+BETTER_AUTH_SECRET=your_secret
+GOOGLE_CLIENT_ID=your_google_id
+GOOGLE_CLIENT_SECRET=your_google_secret
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠️ Installation & Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/shakilcreativework/suncart-store.git
+cd suncart-store
+npm install
+npm run dev
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📌 Important Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* At least 10 meaningful Git commits are included
+* Protected routes implemented correctly
+* Reloading routes does not break (Next.js handling)
+* Environment variables are secured
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 👨‍💻 Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Md Shakil Ahmed
+Frontend Developer
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📜 License
+
+This project is created for academic assignment purposes.
