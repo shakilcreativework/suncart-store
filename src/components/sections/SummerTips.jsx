@@ -6,10 +6,10 @@ const SummerTips = () => {
     return (
         <div className="py-20">
             <Container>
-                <div className="text-center">
+                <div className="animate__animated animate__slideInUp text-center">
                     <SectionTitle paraTitle={'Summer Care'} HeadingTitle={'Tips to glow all season'} />
                 </div>
-                <div className=" my-14 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-5 lg:gap-6">
+                <div className="animate__animated animate__slideInUp my-14 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-5 lg:gap-6">
                     <div className="text-center bg-white rounded-3xl p-5 shadow-xs space-y-2">
                         <div className="w-10 h-10 mx-auto">
                             <Image src={'https://i.ibb.co.com/Q7XR9J7R/sun-glasses.png'} alt="" width={50} height={50} className="w-full h-full" />

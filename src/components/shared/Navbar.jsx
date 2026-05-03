@@ -119,7 +119,7 @@ const Navbar = () => {
                                     <div className="flex gap-1 sm:gap-2 items-center">
 
                                         {/* Avatar */}
-                                        <div className="border-2 border-orange-300 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
+                                        <div className="animate__animated animate__zoomIn border-2 border-orange-300 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
                                             {session.user.image ? (
                                                 <Link href={'/profile'}>
                                                     <Image

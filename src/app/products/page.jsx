@@ -9,7 +9,7 @@ const ProductsPage = async () => {
     return (
         <div className="py-20">
             <Container>
-                <div className="text-center">
+                <div className="animate__animated animate__slideInUp text-center">
                     <SectionTitle paraTitle={'Shop the collection'} HeadingTitle={'All Summer Essentials'} headingClass={'text-3xl md:text-4xl xl:text-5xl'} />
                     <p className="text-[#52657a] text-base font-normal mt-3">Hand-picked products to keep you cool, safe, and stylish.</p>
                 </div>

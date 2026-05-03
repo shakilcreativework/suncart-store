@@ -32,7 +32,7 @@ const NotFound = () => {
                             <Button leftIcon={<HiHome />} href="/" as="link" className="" text={'Go Home'} />
                         </div>
 
-                        <div>
+                        <div className='animate__animated animate__zoomIn '>
                             <Image src={'https://i.ibb.co.com/wrQmyYPT/alert.png'} alt='Data missing' width={200} height={200} priority className='w-full h-full' />
                         </div>
 

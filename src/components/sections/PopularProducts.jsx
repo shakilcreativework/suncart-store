@@ -13,7 +13,9 @@ const PopularProducts = async () => {
         <div className="py-20">
             <Container>
                 <div className='space-y-4'>
-                    <SectionTitle paraTitle={'Trending Now'} HeadingTitle={'Popular this summer'} />
+                    <div className="animate__animated animate__slideInLeft">
+                        <SectionTitle paraTitle={'Trending Now'} HeadingTitle={'Popular this summer'} />
+                    </div>
                     <div className="flex justify-start md:justify-end items-center">
                         <Link href={`/products`} className="text-[#fd7933] font-semibold text-sm capitalize flex items-center gap-2">view all <IoArrowForwardSharp /></Link>
                     </div>

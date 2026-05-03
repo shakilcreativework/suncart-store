@@ -19,7 +19,7 @@ const ProductDetailsPage = () => {
         <div className="py-20">
             <Container>
                 <div className="space-y-10">
-                    <Link href={`/products`} className="hover:text-[#fd7933] text-[#52657a] font-semibold text-sm capitalize flex items-center gap-2 w-fit"><IoArrowBackSharp /> Back to products</Link>
+                    <Link href={`/products`} className="animate__animated animate__slideInUp hover:text-[#fd7933] text-[#52657a] font-semibold text-sm capitalize flex items-center gap-2 w-fit"><IoArrowBackSharp /> Back to products</Link>
                     <div>
                         <div>
                             <ProductDetails product={product} />

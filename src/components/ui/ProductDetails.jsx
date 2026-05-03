@@ -10,10 +10,10 @@ const ProductDetails = ({ product }) => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5 lg:gap-6">
-            <div>
+            <div className="animate__animated animate__slideInUp ">
                 <Image width={500} height={500} src={image} alt={name} className="w-full h-auto aspect-square object-cover rounded-3xl shadow-sm" priority />
             </div>
-            <div className="space-y-5">
+            <div className="animate__animated animate__slideInUp space-y-5">
                 <span className="py-1 px-4 rounded-full text-sm bg-orange-200 text-[#fd7933] font-medium">
                     {category}
                 </span>

@@ -70,7 +70,7 @@ const SignInPage = () => {
     return (
         <div className="min-h-dvh py-20 flex flex-col justify-center items-center bg-linear-to-r from-yellow-100 via-orange-100 to-yellow-200">
             <Container>
-                <div className="flex flex-col items-center bg-white p-6 lg:p-8 rounded-3xl shadow-md">
+                <div className="animate__animated animate__zoomIn flex flex-col items-center bg-white p-6 lg:p-8 rounded-3xl shadow-md">
 
                     {/* Header */}
                     <div className="mb-10 flex flex-col items-center space-y-3">

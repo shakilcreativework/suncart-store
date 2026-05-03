@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
     const { id, name, brand, price, rating, stock, description, image, category } = product;
 
     return (
-        <div className="group border border-gray-200 rounded-3xl overflow-hidden transition-all hover:-translate-y-1.5 shadow-xs hover:shadow-md duration-500">
+        <div className="animate__animated animate__slideInUp border-gray-200 rounded-3xl overflow-hidden transition-all hover:-translate-y-1.5 shadow-xs hover:shadow-md duration-500">
             <div className="relative aspect-square overflow-hidden">
                 <Image
                     width={300}

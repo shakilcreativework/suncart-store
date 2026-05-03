@@ -43,7 +43,7 @@ export default function UpdateProfile() {
 
     return (
         <div className="min-h-dvh flex items-center justify-center bg-linear-to-r from-yellow-100 via-orange-100 to-yellow-200 p-4">
-            <div className="w-full max-w-2xl rounded-3xl shadow-xl overflow-hidden bg-white">
+            <div className="animate__animated animate__zoomIn w-full max-w-2xl rounded-3xl shadow-xl overflow-hidden bg-white">
 
                 {/* Top linear */}
                 <div className="relative h-32 bg-linear-to-r from-blue-400 via-yellow-300 to-orange-400">
