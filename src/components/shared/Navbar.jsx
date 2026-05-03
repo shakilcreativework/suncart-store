@@ -93,12 +93,13 @@ const Navbar = () => {
                                         Products
                                     </Link>
                                 </li>
-
-                                <li>
-                                    <Link onClick={() => setOpen(false)} className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/profile') && 'text-[#fd7933]'}`} href="/profile">
-                                        My Profile
-                                    </Link>
-                                </li>
+                                {session?.user &&
+                                    <li>
+                                        <Link onClick={() => setOpen(false)} className={`font-medium text-sm hover:text-[#fd7933] ${isActive('/profile') && 'text-[#fd7933]'}`} href="/profile">
+                                            My Profile
+                                        </Link>
+                                    </li>
+                                }
 
                                 {!session && <div className="flex justify-center md:hidden mt-2 gap-2">
                                     <Button size="sm" onClick={() => setOpen(false)} as="link" href={'/login'} className={' px-5 lg:px-6 xl:px-7'} leftIcon={<FiLogIn />} variant="outline" text={'Login'} />
