@@ -121,25 +121,29 @@ const Navbar = () => {
                                         {/* Avatar */}
                                         <div className="border-2 border-orange-300 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
                                             {session.user.image ? (
-                                                <Image
-                                                    src={session.user.image}
-                                                    alt="avatar"
-                                                    width={40}
-                                                    height={40}
-                                                    priority
-                                                    className="w-full h-full object-cover"
-                                                />
-                                            ) : (
-                                                <Avatar className="w-full h-full">
-                                                    <Avatar.Image
-                                                        src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3"
+                                                <Link href={'/profile'}>
+                                                    <Image
+                                                        src={session.user.image}
                                                         alt="avatar"
+                                                        width={40}
+                                                        height={40}
+                                                        priority
                                                         className="w-full h-full object-cover"
                                                     />
-                                                    <Avatar.Fallback className="flex items-center justify-center text-sm font-semibold">
-                                                        JD
-                                                    </Avatar.Fallback>
-                                                </Avatar>
+                                                </Link>
+                                            ) : (
+                                                <Link href={'/profile'}>
+                                                    <Avatar className="w-full h-full">
+                                                        <Avatar.Image
+                                                            src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3"
+                                                            alt="avatar"
+                                                            className="w-full h-full object-cover"
+                                                        />
+                                                        <Avatar.Fallback className="flex items-center justify-center text-sm font-semibold">
+                                                            JD
+                                                        </Avatar.Fallback>
+                                                    </Avatar>
+                                                </Link>
                                             )}
                                         </div>
 

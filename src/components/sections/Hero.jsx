@@ -3,7 +3,7 @@ import { FaMagic } from "react-icons/fa";
 import Button from "../ui/Button";
 import Container from "../shared/Container";
 import { LuShoppingBag } from "react-icons/lu";
-import { BsFire, BsGift } from "react-icons/bs";
+import { BsFire } from "react-icons/bs";
 import Image from "next/image";
 
 const Hero = () => {
