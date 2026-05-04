@@ -7,7 +7,7 @@ const SummerTips = () => {
         <div className="py-20">
             <Container>
                 <div className="animate__animated animate__slideInUp text-center">
-                    <SectionTitle paraTitle={'Summer Care'} HeadingTitle={'Tips to glow all season'} />
+                    <SectionTitle paraTitle={'Top Brands'} HeadingTitle={'Curated from the best'} />
                 </div>
                 <div className="animate__animated animate__slideInUp my-14 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-5 lg:gap-6">
                     <div className="text-center bg-white rounded-3xl p-5 shadow-xs space-y-2">
