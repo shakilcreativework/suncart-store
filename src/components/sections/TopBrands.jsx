@@ -5,7 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 
 const TopBrands = () => {
     return (
-        <div className="bg-linear-to-b from-[#7bb6cc] via-[#a8c9cf] to-[#e8dfb8] py-20">
+        <div className="bg-[linear-gradient(oklch(0.85_0.1_230),oklch(0.95_0.05_95))] py-20">
             <Container>
                 <div className="animate__animated animate__slideInUp text-center">
                     <SectionTitle paraTitle={'Summer Care'} HeadingTitle={'Tips to glow all season'} />
